@@ -1,5 +1,29 @@
-# Vue 3 + TypeScript + Vite
+# Desarrollo Frontend prueba desarrollador fullstack 4thewords - Leider Solano Villamizar
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+El frontend se realizo utilizando Vite, Vue y TailwindCSS.
+
+## Instalación
+
+1. se deben configurar las variables de entorno en un archivo `.env` en la carpeta raíz.
+
+```bash
+VITE_API_URL= "http://127.0.0.1:8080"
+
+```
+
+
+
+2. Para instalar las dependencias ejecutamos:
+
+```bash
+npm install
+```
+
+## Ejecución del frontend
+
+Para ejecutar el servidor ejecutamos:
+
+```bash
+npm run dev
+```
