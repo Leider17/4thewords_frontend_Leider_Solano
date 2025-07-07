@@ -1,10 +1,9 @@
-import { API_URL, handleResponse } from "./api";
+import { http } from "./apiClient";
 
-const provincesApiUrl = `${API_URL}/provinces`;
+const provincesApiUrl = `/provinces`;
 
 export const provinceService = {
   async getProvinces() {
-    const response = await fetch(provincesApiUrl);
-    return handleResponse(response);
+    return http.get(`${provincesApiUrl}`);
   },
 };

@@ -1,6 +1,6 @@
-import { API_URL, handleResponse } from "./api";
+import { http } from "./apiClient";
 
-const districtsApiUrl = `${API_URL}/districts`;
+const districtsApiUrl = `/districts`;
 
 export const districtService = {
     async getDistricts(province_id?: number, canton_id?: number) {
@@ -11,7 +11,6 @@ export const districtService = {
         if (canton_id) {
             params.append("canton_id", String(canton_id));
         }
-        const response = await fetch(`${districtsApiUrl}?${params.toString()}`);
-        return handleResponse(response);
+        return http.get(`${districtsApiUrl}?${params.toString()}`);
     },
 };

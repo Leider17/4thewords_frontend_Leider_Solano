@@ -1,6 +1,6 @@
-import { API_URL, handleResponse } from "./api";
+import { http } from "./apiClient";
 
-const cantonsApiUrl = `${API_URL}/cantons`;
+const cantonsApiUrl = `/cantons`;
 
 export const cantonService = {
   async getCantons(province_id?: number) {
@@ -8,7 +8,6 @@ export const cantonService = {
     if (province_id) {
       params.append("province_id", String(province_id));
     }
-    const response = await fetch(`${cantonsApiUrl}?${params.toString()}`);
-    return handleResponse(response);
+    return http.get(`${cantonsApiUrl}?${params.toString()}`);
   },
 };

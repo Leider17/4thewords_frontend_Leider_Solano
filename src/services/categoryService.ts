@@ -1,10 +1,9 @@
-import { API_URL, handleResponse } from "./api";
+import { http } from "./apiClient";
 
-const categoriesApiUrl = `${API_URL}/categories`;
+const categoriesApiUrl = `/categories`;
 
 export const categoryService = {
     async getCategories() {
-        const response = await fetch(categoriesApiUrl);
-        return handleResponse(response);
+        return http.get(`${categoriesApiUrl}`);
     },
 };
